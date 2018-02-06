@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="action_settings">Settings</string>
+
     <string name="title_activity_notification">Notification Center</string>
+
+    <string name="title_activity_sender_form">SenderFormActivity</string>
+
 </resources>
