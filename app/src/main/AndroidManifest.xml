@@ -19,6 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Home" />
+        <activity android:name=".Sender" />
+        <activity android:name=".Reciever" />
+        <activity android:name=".Status"></activity>
     </application>
 
 </manifest>
