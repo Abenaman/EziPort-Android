@@ -29,7 +29,7 @@ public class Home extends AppCompatActivity {
         sender.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Home.this, SenderFormActivity.class);
+                Intent intent = new Intent(Home.this, SearchTransferer.class);
                 startActivity(intent);
             }
         });
