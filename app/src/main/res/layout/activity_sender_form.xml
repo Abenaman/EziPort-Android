@@ -29,119 +29,116 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="left|start"
+            android:gravity="center_horizontal"
             android:orientation="vertical"
             android:padding="15dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <EditText
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="5dp">
-
-                <EditText
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:padding="5dp"
-                    android:id="@+id/destinationBox"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="destination"
-                    android:textSize="22sp"
-                    android:padding="5dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="5dp">
-
-                <EditText
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:padding="5dp"
-                    android:id="@+id/weightBox"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="weight"
-                    android:textSize="22sp"
-                    android:padding="5dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="5dp"
-                android:gravity="center_vertical">
-                
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:inputType="date"
-                        android:id="@+id/fromDateBox"/>
-
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:inputType="date"
-                        android:id="@+id/toDateBox"/>
-                    
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Date range (dd/mm/yy)"
-                    android:textSize="22sp"
-                    android:padding="5dp"/>
-
-            </LinearLayout>
+                android:inputType="text"
+                android:padding="5dp"
+                android:id="@+id/titleBox"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Package details: "
-                android:textSize="22sp"
+                android:text="Title of request"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="5dp"/>
+            
+            
+
+            <Spinner
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:id="@+id/destinationSpinner"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Destination"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="5dp"/>
+            
+            
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
                 android:padding="5dp"
-                android:paddingTop="5dp"/>
+                android:id="@+id/weightBox"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight in kg"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="5dp"/>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:id="@+id/fromDateBox"/>
+
+                <EditText
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:id="@+id/toDateBox"/>
+
+            </LinearLayout>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date range (dd/mm/yy)"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="5dp"/>
+
+
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="80dp"
                 android:inputType="text"
                 android:padding="5dp"
                 android:paddingTop="5dp"
                 android:id="@+id/detailsBox"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Package details"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:paddingTop="5dp"/>
 
-                <Button
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="Submit"
-                    android:textSize="18sp"
-                    android:id="@+id/submit_button"/>
 
-            </LinearLayout>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Submit"
+                android:textSize="18sp"
+                android:id="@+id/submit_button"
+                android:layout_marginTop="10dp"/>
+            
 
         </LinearLayout>
 

@@ -5,11 +5,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Spinner;
 
-public class SenderFormActivity extends AppCompatActivity {
+public class SenderFormActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+
+    String lastDestination = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,12 +23,21 @@ public class SenderFormActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        final Spinner destinationSpinner = (Spinner) findViewById(R.id.destinationSpinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this, R.array.countries_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        destinationSpinner.setAdapter(adapter);
+        destinationSpinner.setOnItemSelectedListener(this);
+
         Button button = findViewById(R.id.submit_button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText destinationBox = (EditText) findViewById(R.id.destinationBox);
-                String destination = destinationBox.getText().toString();
+                EditText titleBox = (EditText) findViewById(R.id.titleBox);
+                String title = titleBox.getText().toString();
+
+                String destination = lastDestination;
 
                 EditText weightBox = (EditText) findViewById(R.id.weightBox);
                 int weight = Integer.valueOf(weightBox.getText().toString());
@@ -45,4 +58,13 @@ public class SenderFormActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        lastDestination = adapterView.getItemAtPosition(i).toString();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
 }

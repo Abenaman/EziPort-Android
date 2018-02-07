@@ -21,7 +21,8 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".Transfer"
+        <activity
+            android:name=".Transfer"
             android:parentActivityName=".Home">
 
 
@@ -29,8 +30,10 @@
         <activity
             android:name=".SenderFormActivity"
             android:label="@string/title_activity_sender_form"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Home">
 
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        </activity>
 
 
         <activity
