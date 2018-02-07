@@ -21,13 +21,9 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".Transfer">
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".Transfer"
+            android:parentActivityName=".Home">
 
-
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
 
         </activity>
         <activity
@@ -42,10 +38,19 @@
             android:label="@string/title_activity_notification"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".Home" />
-        <activity android:name=".Sender" />
+        <activity android:name=".Home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Sender"
+        android:parentActivityName=".Home"/>
         <activity android:name=".Reciever" />
-        <activity android:name=".Status"></activity>
+        <activity android:name=".Status"
+            android:parentActivityName=".Home"></activity>
     </application>
 
 </manifest>
