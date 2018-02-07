@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Ezi-Port</string>
+    <string name="app_name">EziPort</string>
     <string name="action_settings">Settings</string>
 
     <string name="title_activity_transfer">Transfer</string>
