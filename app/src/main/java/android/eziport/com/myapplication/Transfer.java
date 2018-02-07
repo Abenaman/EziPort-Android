@@ -35,6 +35,45 @@ public class Transfer extends AppCompatActivity {
         weight_txt=(EditText) findViewById(R.id.weight_p);
         time_txt=(EditText) findViewById(R.id.time_p);
         tr= new SendTransfer(weight,date,name,time,transferList,Spin1,Spin2);
+        btnSubmit=(Button)findViewById(R.id.submit_button);
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                weight=weight_txt.getText().toString().trim();
+                date=date_txt.getText().toString().trim();
+                time=time_txt.getText().toString().trim();
+                name=name_txt.getText().toString().trim();
+                Spin1=spinner1.getSelectedItem().toString().trim();
+                Spin2=spinner2.getSelectedItem().toString().trim();
+                if(weight.length() != 0 && date.length() !=0 && time.length() !=0 && name.length() !=0) {
+                    transferList.add(weight);
+                    transferList.add(date);
+                    transferList.add(time);
+                    transferList.add(name);
+                    transferList.add(Spin1);
+                    transferList.add(Spin2);
+                    tr.setDate(date);
+                    tr.setName(name);
+                    tr.setWeight(weight);
+                    tr.setTime(time);
+                    tr.setTransferList(transferList);
+                    //                    JSONArray jsonArray = new JSONArray(Arrays.asList(transferList));
+                    date_txt.setText("");
+                    time_txt.setText("");
+                    name_txt.setText("");
+                    weight_txt.setText("");
+                    Toast.makeText(Transfer.this,
+                            "You have Submited your data"+transferList, Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(Transfer.this,
+                            "Please Enter a full data", Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
 
     }
     // add items into spinner dynamically
@@ -61,43 +100,6 @@ public class Transfer extends AppCompatActivity {
         spinner2.setOnItemSelectedListener(new OnItemSelectedListener());
     }
     public void addListenerOnButton() {
-     btnSubmit.setOnClickListener(new View.OnClickListener() {
 
-        @Override
-        public void onClick(View v) {
-
-            weight=weight_txt.getText().toString().trim();
-            date=date_txt.getText().toString().trim();
-            time=time_txt.getText().toString().trim();
-            name=name_txt.getText().toString().trim();
-            Spin1=spinner1.getSelectedItem().toString().trim();
-            Spin2=spinner2.getSelectedItem().toString().trim();
-            if(weight.length() != 0 && date.length() !=0 && time.length() !=0 && name.length() !=0) {
-                transferList.add(weight);
-                transferList.add(date);
-                transferList.add(time);
-                transferList.add(name);
-                transferList.add(Spin1);
-                transferList.add(Spin2);
-                tr.setDate(date);
-                tr.setName(name);
-                tr.setWeight(weight);
-                tr.setTime(time);
-                tr.setTransferList(transferList);
-                //                    JSONArray jsonArray = new JSONArray(Arrays.asList(transferList));
-                date_txt.setText("");
-                time_txt.setText("");
-                name_txt.setText("");
-                weight_txt.setText("");
-                Toast.makeText(Transfer.this,
-                        "You have Submited your data"+transferList, Toast.LENGTH_SHORT).show();
-            }
-            else {
-                Toast.makeText(Transfer.this,
-                        "Please Enter a full data", Toast.LENGTH_SHORT).show();
-
-            }
-        }
-    });
 }
 }
