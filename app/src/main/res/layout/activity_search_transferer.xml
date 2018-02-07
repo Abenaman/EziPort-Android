@@ -58,9 +58,14 @@
         android:layout_height="49dp"
         android:layout_marginTop="165dp"
         android:layout_gravity="center_horizontal"
-        android:text="Search Transferer"/>
+        android:text="Search"/>
 
-    <include layout="@layout/content_search_transferer"
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="android.eziport.com.myapplication.SearchTransfererFragment"
+        android:layout_width="match_parent"
+        android:layout_marginTop="220dp"
+        android:layout_height="match_parent"
         />
 
 

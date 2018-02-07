@@ -8,29 +8,29 @@
     tools:context="android.eziport.com.myapplication.Home">
 
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="300dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="10dp"
-        android:text="Status" />
+    <!--<Button-->
+        <!--android:id="@+id/button1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:layout_marginLeft="300dp"-->
+        <!--android:layout_marginRight="0dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:text="Status" />-->
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="400px"
-        android:layout_height="130px"
+        android:layout_width="450px"
+        android:layout_height="180px"
         android:layout_gravity="center"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="100dp"
         android:text="Sender" />
 
     <Button
         android:id="@+id/button3"
         android:layout_gravity="center"
-        android:layout_width="400px"
-        android:layout_height="130px"
+        android:layout_width="450px"
+        android:layout_height="180px"
         android:text="Transferer" />
 
 
