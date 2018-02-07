@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, MainComboBox!</string>
+    <string name="app">ComboBox</string>
+    <string name="prompt">Choose a country</string>
+    <string-array name="countries_array">
+        <item>Tallinn</item>
+        <item>Tartu</item>
+        <item>Nigeria</item>
+        <item>China</item>
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>Ethiopia</item>
+        <item>Bangladesh</item>
+        <item>Russia</item>
+    </string-array>
+
+
+
+</resources>
