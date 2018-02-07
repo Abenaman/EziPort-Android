@@ -30,6 +30,18 @@
              </intent-filter>
 
         </activity>
+        <activity
+            android:name=".SenderFormActivity"
+            android:label="@string/title_activity_sender_form"
+
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <!--android:parentActivityName="com.example.myfirstapp.Home"-->
+        <activity
+            android:name=".NotificationActivity"
+            android:label="@string/title_activity_notification"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>
