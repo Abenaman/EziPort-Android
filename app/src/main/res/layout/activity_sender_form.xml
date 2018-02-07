@@ -33,14 +33,6 @@
             android:orientation="vertical"
             android:padding="15dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Request #264"
-                android:textSize="30sp"
-                android:padding="5dp"
-                android:paddingTop="5dp"/>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -51,7 +43,8 @@
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:inputType="text"
-                    android:padding="5dp"/>
+                    android:padding="5dp"
+                    android:id="@+id/destinationBox"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -72,12 +65,13 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:padding="5dp"/>
+                    android:padding="5dp"
+                    android:id="@+id/weightBox"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="kilograms"
+                    android:text="weight"
                     android:textSize="22sp"
                     android:padding="5dp"/>
 
@@ -99,13 +93,13 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:inputType="date"
-                        />
+                        android:id="@+id/fromDateBox"/>
 
                     <EditText
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:inputType="date"
-                        />
+                        android:id="@+id/toDateBox"/>
                     
                 </LinearLayout>
 
@@ -131,7 +125,8 @@
                 android:layout_height="150dp"
                 android:inputType="text"
                 android:padding="5dp"
-                android:paddingTop="5dp"/>
+                android:paddingTop="5dp"
+                android:id="@+id/detailsBox"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
