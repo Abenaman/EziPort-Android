@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/SingInMainLabel"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="46dp"
+            android:gravity="center"
+            android:paddingEnd="30dp"
+            android:paddingRight="30dp"
+            android:text="Sign Up To EziPort"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/userNameLabel"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/SingInMainLabel"
+            android:paddingEnd="30dp"
+            android:paddingRight="30dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:text="E mail"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/FirstName"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/userNameLabel" />
+
+        <TextView
+            android:id="@+id/firstNameLabel"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/userNameLabel"
+            android:paddingEnd="30dp"
+            android:paddingRight="30dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:text="FirstName"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/Email"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/SingInMainLabel" />
+
+        <TextView
+            android:id="@+id/LastNameLabel"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/firstNameLabel"
+            android:paddingEnd="30dp"
+            android:paddingRight="30dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:text="LastName"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/LastName"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/FirstName" />
+
+        <TextView
+            android:id="@+id/passportLabel"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/LastNameLabel"
+            android:paddingEnd="30dp"
+            android:paddingRight="30dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:text="Passport No"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/Passport"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/LastName" />
+
+        <TextView
+            android:id="@+id/bankAccountLabel"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/passportLabel"
+            android:layout_centerHorizontal="true"
+            android:paddingEnd="30dp"
+            android:paddingRight="30dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="7dp"
+            android:text="Bank Account"
+            android:textSize="18dp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/BankAccount"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/Passport" />
+
+        <TextView
+            android:id="@+id/passwordLabel"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/bankAccountLabel"
+            android:layout_centerHorizontal="true"
+            android:paddingEnd="30dp"
+            android:paddingRight="30dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="40dp"
+            android:text="Pass Word"
+            android:textSize="18dp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/PassWord"
+            android:layout_width="220dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/BankAccount" />
+
+        <TextView
+            android:id="@+id/confirmpasswordLabel"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/passwordLabel"
+            android:layout_centerHorizontal="true"
+            android:paddingEnd="30dp"
+            android:paddingRight="30dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:text="Confirm Pass Word"
+            android:textSize="18dp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/confirmPassWord"
+            android:layout_width="220dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/PassWord" />
+
+        <Button
+            android:id="@+id/Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/confirmpasswordLabel"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="43dp"
+            android:layout_marginTop="18dp"
+            android:layout_toStartOf="@+id/confirmPassWord"
+            android:layout_toLeftOf="@+id/confirmPassWord"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/Register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/Cancel"
+            android:layout_marginStart="43dp"
+            android:layout_marginLeft="43dp"
+            android:layout_toEndOf="@+id/confirmpasswordLabel"
+            android:layout_toRightOf="@+id/confirmpasswordLabel"
+            android:text="Register" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

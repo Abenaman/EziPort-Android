@@ -23,19 +23,19 @@
         </activity>
         <activity
             android:name=".Transfer"
-            android:parentActivityName=".Home"
-            android:label="New Trip"></activity>
+            android:label="New Trip"
+            android:parentActivityName=".Home" />
         <activity
             android:name=".SenderFormActivity"
             android:label="@string/title_activity_sender_form"
             android:parentActivityName=".Home"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".NotificationActivity"
             android:label="Notification"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
-        <activity android:name=".Home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Home"
             android:label="Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -52,6 +52,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="android.eziport.com.myapplication.Home" />
         </activity>
+        <activity android:name=".SignIn" />
+        <activity android:name=".SignUp"></activity>
     </application>
 
 </manifest>
