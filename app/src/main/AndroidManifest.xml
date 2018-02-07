@@ -42,6 +42,10 @@
             android:label="@string/title_activity_notification"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".Home" />
+        <activity android:name=".Sender" />
+        <activity android:name=".Reciever" />
+        <activity android:name=".Status"></activity>
     </application>
 
 </manifest>
