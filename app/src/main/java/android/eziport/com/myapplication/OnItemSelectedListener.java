@@ -12,8 +12,8 @@ public class OnItemSelectedListener implements AdapterView.OnItemSelectedListene
 
     public void onItemSelected(AdapterView<?> parent,
                                View view, int pos, long id) {
-        Toast.makeText(parent.getContext(), "Item is " +
-                parent.getItemAtPosition(pos).toString(), Toast.LENGTH_LONG).show();
+//        Toast.makeText(parent.getContext(), "Item is " +
+//                parent.getItemAtPosition(pos).toString(), Toast.LENGTH_LONG).show();
     }
 
     public void onNothingSelected(AdapterView parent) {

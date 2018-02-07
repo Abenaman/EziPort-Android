@@ -21,26 +21,36 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".Transfer">
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
-
-
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
-
-        </activity>
+        <activity
+            android:name=".Transfer"
+            android:parentActivityName=".Home"
+            android:label="New Trip"></activity>
         <activity
             android:name=".SenderFormActivity"
             android:label="@string/title_activity_sender_form"
-
+            android:parentActivityName=".Home"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-
-        <!--android:parentActivityName="com.example.myfirstapp.Home"-->
         <activity
             android:name=".NotificationActivity"
-            android:label="@string/title_activity_notification"
+            android:label="Notification"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity android:name=".Home"
+            android:label="Home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SearchTransferer"
+            android:label="@string/title_activity_search_transferer"
+            android:parentActivityName=".Home"
             android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.eziport.com.myapplication.Home" />
         </activity>
     </application>
 

@@ -7,10 +7,11 @@
 
     <string name="title_activity_notification">Notification Center</string>
 
-    <string name="title_activity_sender_form">SenderFormActivity</string>
+    <string name="title_activity_sender_form">New Request</string>
     <string name="tab_text_1">Requests</string>
     <string name="tab_text_2">Offers</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_search_transferer">Search Transferer</string>
 
 
 </resources>
