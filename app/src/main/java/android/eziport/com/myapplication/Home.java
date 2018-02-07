@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 public class Home extends AppCompatActivity {
-//    public static final int REQUEST_CODE = 1;
-//    private static final int REPLY_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
