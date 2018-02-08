@@ -136,7 +136,7 @@
                 android:layout_height="50dp"
                 android:text="Submit"
                 android:textSize="18sp"
-                android:id="@+id/submit_button"
+                android:id="@+id/submit_button_sender"
                 android:layout_marginTop="10dp"/>
             
 

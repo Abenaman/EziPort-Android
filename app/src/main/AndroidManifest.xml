@@ -50,7 +50,13 @@
         </activity>
         <activity
             android:name=".Notification.Activity.RequestInfoActivity"
-            android:label="@string/title_activity_request_info"
+            android:label="My Requests"
+            android:parentActivityName=".Home"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name=".Notification.Activity.OfferInfoActivity"
+            android:label="My Offers"
             android:parentActivityName=".Home"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

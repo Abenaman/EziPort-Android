@@ -1,6 +1,7 @@
 package android.eziport.com.myapplication;
 
 import android.content.Intent;
+import android.eziport.com.myapplication.Notification.Activity.OfferInfoActivity;
 import android.eziport.com.myapplication.Notification.Activity.RequestInfoActivity;
 import android.eziport.com.myapplication.Search.Transferer.Activity.SearchTransferer;
 import android.support.v7.app.AppCompatActivity;
@@ -55,6 +56,12 @@ public class Home extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.requestInfoMenu) {
             Intent intent = new Intent(Home.this, RequestInfoActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.offersInfoMenu) {
+            Intent intent = new Intent(Home.this, OfferInfoActivity.class);
             startActivity(intent);
             return true;
         }
