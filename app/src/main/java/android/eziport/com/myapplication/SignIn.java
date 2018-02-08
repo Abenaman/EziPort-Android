@@ -69,6 +69,12 @@ public class SignIn extends Activity {
                     dlgAlert.setCancelable(true);
                     dlgAlert.create().show();
                 }
+                else
+                {
+                    Intent myIntent = new Intent( view.getContext(), Home.class);
+                    startActivity(myIntent);
+                    finish();
+                }
             }
         });
 
