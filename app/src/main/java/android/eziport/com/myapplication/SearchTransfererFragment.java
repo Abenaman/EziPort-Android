@@ -8,13 +8,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 
 /**
  * A placeholder fragment containing a simple view.
  */
 public class SearchTransfererFragment extends ListFragment implements AdapterView.OnItemClickListener{
+
+    ArrayList<SearchDataModel> dataModels;
+    private static CustomSearchAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -26,10 +32,35 @@ public class SearchTransfererFragment extends ListFragment implements AdapterVie
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(),
-                R.array.Planets, android.R.layout.simple_list_item_1);
+
+
+
+
+        //---------------------------------------------------
+
+
+        dataModels= new ArrayList<>();
+
+        dataModels.add(new SearchDataModel("11/2/2018", "5"));
+        dataModels.add(new SearchDataModel("11/2/2018", "6"));
+        dataModels.add(new SearchDataModel("11/2/2018", "7"));
+        dataModels.add(new SearchDataModel("11/2/2018", "8"));
+        dataModels.add(new SearchDataModel("11/2/2018", "9"));
+        dataModels.add(new SearchDataModel("11/2/2018", "10"));
+        dataModels.add(new SearchDataModel("11/2/2018", "11"));
+
+
+
+
+        adapter= new CustomSearchAdapter(dataModels,getContext());
+
         setListAdapter(adapter);
+
         getListView().setOnItemClickListener(this);
+
+
+
+        //---------------------------------------------------
     }
 
     @Override
