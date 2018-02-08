@@ -30,26 +30,26 @@ public class SenderFormActivity extends AppCompatActivity implements AdapterView
         destinationSpinner.setAdapter(adapter);
         destinationSpinner.setOnItemSelectedListener(this);
 
-        Button button = findViewById(R.id.submit_button);
+        Button button = findViewById(R.id.submit_button_sender);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText titleBox = (EditText) findViewById(R.id.titleBox);
-                String title = titleBox.getText().toString();
-
-                String destination = lastDestination;
-
-                EditText weightBox = (EditText) findViewById(R.id.weightBox);
-                int weight = Integer.valueOf(weightBox.getText().toString());
-
-                EditText fromDateBox = (EditText) findViewById(R.id.fromDateBox);
-                String fromDate = fromDateBox.getText().toString();
-
-                EditText toDateBox = (EditText) findViewById(R.id.toDateBox);
-                String toDate = toDateBox.getText().toString();
-
-                EditText detailsBox = (EditText) findViewById(R.id.detailsBox);
-                String details = detailsBox.getText().toString();
+//                EditText titleBox = (EditText) findViewById(R.id.titleBox);
+//                String title = titleBox.getText().toString();
+//
+//                String destination = lastDestination;
+//
+//                EditText weightBox = (EditText) findViewById(R.id.weightBox);
+//                int weight = Integer.valueOf(weightBox.getText().toString());
+//
+//                EditText fromDateBox = (EditText) findViewById(R.id.fromDateBox);
+//                String fromDate = fromDateBox.getText().toString();
+//
+//                EditText toDateBox = (EditText) findViewById(R.id.toDateBox);
+//                String toDate = toDateBox.getText().toString();
+//
+//                EditText detailsBox = (EditText) findViewById(R.id.detailsBox);
+//                String details = detailsBox.getText().toString();
 
                 Intent intent = new Intent(getApplicationContext(), Home.class);
                 startActivity(intent);

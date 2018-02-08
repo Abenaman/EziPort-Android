@@ -3,9 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="android.eziport.com.myapplication.MainActivity">
     <item
-        android:id="@+id/notification_menu"
+        android:id="@+id/requestInfoMenu"
         android:orderInCategory="100"
-        android:icon="@drawable/ic_notify_bell"
-        app:showAsAction="always" />
+        android:title="My Requests"
+        app:showAsAction="never" />
+
+    <item
+    android:id="@+id/offersInfoMenu"
+    android:orderInCategory="100"
+    android:title="My Offers"
+    app:showAsAction="never" />
 
 </menu>
