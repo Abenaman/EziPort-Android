@@ -31,11 +31,6 @@
             android:parentActivityName=".Home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Notification.Activity.NotificationActivity"
-            android:label="Notification"
-            android:parentActivityName=".Home"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".Home"
             android:label="Home">
             <intent-filter>
@@ -53,6 +48,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="android.eziport.com.myapplication.Home" />
         </activity>
+        <activity
+            android:name=".Notification.Activity.RequestInfoActivity"
+            android:label="@string/title_activity_request_info"
+            android:parentActivityName=".Home"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

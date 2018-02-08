@@ -4,10 +4,12 @@
     android:layout_height="match_parent"
     tools:context="android.eziport.com.myapplication.Notification.Activity.RequestInfoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="android.eziport.com.myapplication.Search.Transferer.Activity.SearchTransfererFragment"
         android:layout_width="match_parent"
+        android:layout_marginTop="60dp"
         android:layout_height="match_parent"
-        android:text="Hello from -1" />
+        />
 
 </FrameLayout>
