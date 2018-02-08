@@ -1,17 +1,18 @@
-package android.eziport.com.myapplication;
+package android.eziport.com.myapplication.Search.Transferer.Activity;
 
-import android.support.v4.app.Fragment;
+import android.eziport.com.myapplication.R;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import NonActivity.Classes.CustomSearchAdapter;
+import NonActivity.Classes.SearchDataModel;
 
 
 /**

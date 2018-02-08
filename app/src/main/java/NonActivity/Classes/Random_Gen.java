@@ -1,4 +1,4 @@
-package android.eziport.com.myapplication;
+package NonActivity.Classes;
 
 /**
  * Created by abenagood on 7.02.18.

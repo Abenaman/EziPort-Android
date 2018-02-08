@@ -1,5 +1,6 @@
-package android.eziport.com.myapplication;
+package android.eziport.com.myapplication.Notification.Activity;
 
+import android.eziport.com.myapplication.R;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;

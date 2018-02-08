@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="android.eziport.com.myapplication.SearchTransfererFragment"
+    tools:context="android.eziport.com.myapplication.Search.Transferer.Activity.SearchTransfererFragment"
     tools:showIn="@layout/activity_search_transferer">
 
 </android.support.constraint.ConstraintLayout>

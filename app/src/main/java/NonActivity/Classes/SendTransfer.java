@@ -1,4 +1,4 @@
-package android.eziport.com.myapplication;
+package NonActivity.Classes;
 
 
 import java.util.ArrayList;

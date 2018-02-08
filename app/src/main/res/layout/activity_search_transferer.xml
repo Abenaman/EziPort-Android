@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="android.eziport.com.myapplication.SearchTransferer">
+    tools:context="android.eziport.com.myapplication.Search.Transferer.Activity.SearchTransferer">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -62,7 +62,7 @@
 
     <fragment
         android:id="@+id/fragment1"
-        android:name="android.eziport.com.myapplication.SearchTransfererFragment"
+        android:name="android.eziport.com.myapplication.Search.Transferer.Activity.SearchTransfererFragment"
         android:layout_width="match_parent"
         android:layout_marginTop="220dp"
         android:layout_height="match_parent"

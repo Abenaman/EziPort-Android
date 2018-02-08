@@ -1,21 +1,18 @@
-package android.eziport.com.myapplication;
+package NonActivity.Classes;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Debug;
-import android.support.design.widget.Snackbar;
-import android.util.Log;
+import android.eziport.com.myapplication.R;
+import android.eziport.com.myapplication.SenderFormActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.view.LayoutInflater;
+
 import java.util.ArrayList;
-import android.content.Context;
 
 /**
  * Created by Mahir Gulzar on 2/8/2018.

@@ -10,6 +10,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import java.util.ArrayList;
 
+import NonActivity.Classes.SendTransfer;
+
 public class Transfer extends AppCompatActivity {
 
     private Spinner spinner1, spinner2;

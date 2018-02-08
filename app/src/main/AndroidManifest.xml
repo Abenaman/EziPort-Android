@@ -31,7 +31,7 @@
             android:parentActivityName=".Home"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".NotificationActivity"
+            android:name=".Notification.Activity.NotificationActivity"
             android:label="Notification"
             android:theme="@style/AppTheme.NoActionBar"></activity>
 
@@ -44,7 +44,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SearchTransferer"
+            android:name=".Search.Transferer.Activity.SearchTransferer"
             android:label="@string/title_activity_search_transferer"
             android:parentActivityName=".Home"
             android:theme="@style/AppTheme.NoActionBar">

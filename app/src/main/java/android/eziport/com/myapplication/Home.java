@@ -1,7 +1,8 @@
 package android.eziport.com.myapplication;
 
-import android.app.Notification;
 import android.content.Intent;
+import android.eziport.com.myapplication.Notification.Activity.NotificationActivity;
+import android.eziport.com.myapplication.Search.Transferer.Activity.SearchTransferer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;

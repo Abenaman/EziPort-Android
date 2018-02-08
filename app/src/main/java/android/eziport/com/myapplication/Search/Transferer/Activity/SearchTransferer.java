@@ -1,8 +1,8 @@
-package android.eziport.com.myapplication;
+package android.eziport.com.myapplication.Search.Transferer.Activity;
 
+import android.eziport.com.myapplication.OnItemSelectedListener;
+import android.eziport.com.myapplication.R;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
