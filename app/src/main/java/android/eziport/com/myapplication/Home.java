@@ -17,17 +17,8 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-//        Button status = (Button) findViewById(R.id.button1);
         Button sender = (Button) findViewById(R.id.button2);
         Button transfer = (Button) findViewById(R.id.button3);
-
-//        status.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(Home.this, NotificationActivity.class);
-//                startActivity(intent);
-//            }
-//        });
 
         sender.setOnClickListener(new View.OnClickListener() {
             @Override
