@@ -8,11 +8,11 @@ import java.util.ArrayList;
  */
 
 public class SendTransfer {
-    private String weight, date, name, time, from, to;
+    private String weight, date, name, time, from, to,status;
     ArrayList<String> transferList = new ArrayList<String>();
     String transferData[];
 
-    public SendTransfer(String weight, String date, String name, String time, ArrayList<String> transferList, String from, String to) {
+    public SendTransfer(String from, String to, String date,String status, String name,String weight, String time, ArrayList<String> transferList) {
         this.weight = weight;
         this.date = date;
         this.name = name;
@@ -20,7 +20,16 @@ public class SendTransfer {
         this.transferList = transferList;
         this.from = from;
         this.to = to;
+        this.status=status;
 
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getWeight() {

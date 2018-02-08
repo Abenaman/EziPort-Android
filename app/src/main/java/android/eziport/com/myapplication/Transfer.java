@@ -36,14 +36,15 @@ public class Transfer extends AppCompatActivity {
 
     private Spinner spinner1, spinner2;
     private Button btnSubmit;
-    private String weight,date,name,time,Spin1,Spin2;
+    private String weight,date,name,time,Spin1,Spin2,status;
     EditText date_txt;
     EditText name_txt;
     EditText weight_txt;
     EditText time_txt;
     ArrayList<String> transferList = new ArrayList<String>();
     String transferData[];
-    SendTransfer tr= new SendTransfer(weight,date,name,time,transferList,Spin1,Spin2);
+    SendTransfer tr;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,13 +56,19 @@ public class Transfer extends AppCompatActivity {
         name_txt=(EditText) findViewById(R.id.name);
         weight_txt=(EditText) findViewById(R.id.weight_p);
         time_txt=(EditText) findViewById(R.id.time_p);
-        tr= new SendTransfer(weight,date,name,time,transferList,Spin1,Spin2);
         btnSubmit=(Button)findViewById(R.id.submit_button);
+        weight=weight_txt.getText().toString().trim();
+        date=date_txt.getText().toString().trim();
+        time=time_txt.getText().toString().trim();
+        name=name_txt.getText().toString().trim();
+        Spin1=spinner1.getSelectedItem().toString().trim();
+        Spin2=spinner2.getSelectedItem().toString().trim();
+
+
         btnSubmit.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-
                 weight=weight_txt.getText().toString().trim();
                 date=date_txt.getText().toString().trim();
                 time=time_txt.getText().toString().trim();
@@ -69,35 +76,44 @@ public class Transfer extends AppCompatActivity {
                 Spin1=spinner1.getSelectedItem().toString().trim();
                 Spin2=spinner2.getSelectedItem().toString().trim();
 
-//                //
-//                if(!validate())
-//                    Toast.makeText(getBaseContext(), "Enter some data!", Toast.LENGTH_LONG).show();
-//                // call AsynTask to perform network operation on separate thread
-//                new HttpAsyncTask().execute("echo.jsontest.com");
-//                break;
-
-
                 if(weight.length() != 0 && date.length() !=0 && time.length() !=0 && name.length() !=0) {
+                    SendTransfer  tr= new SendTransfer(Spin1,Spin2,date,status,name,weight,time,transferList);
                     transferList.add(weight);
                     transferList.add(date);
                     transferList.add(time);
                     transferList.add(name);
                     transferList.add(Spin1);
                     transferList.add(Spin2);
+                    tr.setTo(Spin1);
+                    tr.setFrom(Spin2);
                     tr.setDate(date);
                     tr.setName(name);
                     tr.setWeight(weight);
                     tr.setTime(time);
                     tr.setTransferList(transferList);
-                    JSONArray jsonArray = new JSONArray(Arrays.asList(transferList));
-                    date_txt.setText("");
-                    time_txt.setText("");
-                    name_txt.setText("");
-                    weight_txt.setText("");
-                    new HttpAsyncTask().execute("echo.jsontest.com");
+//                    JSONArray jsonArray = new JSONArray(Arrays.asList(transferList));
+//                    date_txt.setText("");
+//                    time_txt.setText("");
+//                    name_txt.setText("");
+//                    weight_txt.setText("");
+                    try{
+                        if(isConnected()&& validate()){
+                            new HttpAsyncTask().execute("http://172.19.20.68:8080/post-transfer");
+                            Toast.makeText(Transfer.this,
+                                    "You have Submited your data", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            Toast.makeText(Transfer.this,
+                                    "Connection Error", Toast.LENGTH_SHORT).show();
 
-                    Toast.makeText(Transfer.this,
-                            "You have Submited your data"+jsonArray, Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    catch(Exception e){
+
+                        e.getMessage();
+                    }
+
+
                 }
                 else {
                     Toast.makeText(Transfer.this,
@@ -150,12 +166,12 @@ public class Transfer extends AppCompatActivity {
 
             // 3. build jsonObject
             JSONObject jsonObject = new JSONObject();
-            jsonObject.accumulate("name", data.getName());
-            jsonObject.accumulate("weight", data.getWeight());
-            jsonObject.accumulate("time", data.getTime());
+            jsonObject.accumulate("countryFrom", data.getFrom());
+            jsonObject.accumulate("countryTo", data.getTo());
             jsonObject.accumulate("date", data.getDate());
-            jsonObject.accumulate("from", data.getFrom());
-            jsonObject.accumulate("to", data.getTo());
+            jsonObject.accumulate("status", data.getStatus());
+            jsonObject.accumulate("username", data.getName());
+            jsonObject.accumulate("weight", data.getWeight());
 
             // 4. convert JSONObject to JSON to String
             json = jsonObject.toString();
@@ -204,18 +220,17 @@ public class Transfer extends AppCompatActivity {
     }
 
     private class HttpAsyncTask extends AsyncTask<String, Void, String> {
+
         @Override
         protected String doInBackground(String... urls) {
-            Spin1=spinner1.getSelectedItem().toString().trim();
-            Spin2=spinner2.getSelectedItem().toString().trim();
-            tr = new SendTransfer(weight,date,name,time,transferList,Spin1,Spin2);
+            tr= new SendTransfer(Spin1,Spin2,date,status,name,weight,time,transferList);
+
+            tr.setFrom(spinner1.getSelectedItem().toString().trim());
+            tr.setTo(spinner2.getSelectedItem().toString().trim());
+            tr.setDate(date_txt.getText().toString());
+            tr.setStatus("1");
             tr.setName(name_txt.getText().toString());
             tr.setWeight(weight_txt.getText().toString());
-            tr.setDate(date_txt.getText().toString());
-            tr.setTime(time_txt.getText().toString());
-            tr.setTo(Spin1);
-            tr.setTo(Spin2);
-
             return POST(urls[0],tr);
         }
         // onPostExecute displays the results of the AsyncTask.
