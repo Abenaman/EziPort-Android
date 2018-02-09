@@ -14,7 +14,7 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="364dp"
+            android:layout_width="match_parent"
             android:layout_height="70dp"
             android:gravity="center"
             android:text="Welcome To EziPort"
@@ -78,12 +78,13 @@
             android:id="@+id/userNameLabel"
             android:layout_width="150dp"
             android:layout_height="60dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/SingUpMainLabel"
+            android:layout_alignBaseline="@+id/userName"
+            android:layout_alignBottom="@+id/userName"
+            android:layout_alignEnd="@+id/passWordLabel"
+            android:layout_alignRight="@+id/passWordLabel"
             android:paddingEnd="30dp"
-            android:paddingRight="30dp"
             android:paddingLeft="20dp"
+            android:paddingRight="30dp"
             android:paddingTop="15dp"
             android:text="User Name"
             android:textSize="20sp"
@@ -91,8 +92,9 @@
 
         <EditText
             android:id="@+id/userName"
-            android:layout_width="220dp"
+            android:layout_width="180dp"
             android:layout_height="60dp"
+            android:inputType="textPersonName"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/SingUpMainLabel" />
@@ -114,8 +116,9 @@
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="220dp"
+            android:layout_width="180dp"
             android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/userName"

@@ -132,10 +132,12 @@
 
 
             <Button
-                android:layout_width="100dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="Submit"
-                android:textSize="18sp"
+                android:textColor="#FFFF"
+                android:textSize="20dp"
+                android:background="#A148E3"
                 android:id="@+id/submit_button_sender"
                 android:layout_marginTop="10dp"/>
             

@@ -59,12 +59,15 @@
 
     <Button
         android:id="@+id/submit_button"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="27dp"
         android:layout_marginStart="27dp"
         android:text="Submit"
+        android:textColor="#ffff"
+        android:textSize="20dp"
+        android:background="#EA6D49"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -104,7 +107,7 @@
     <TextView
         android:id="@+id/time"
         android:layout_width="182dp"
-        android:layout_height="0dp"
+        android:layout_height="30dp"
 
         android:layout_marginBottom="18dp"
         android:layout_marginEnd="84dp"
