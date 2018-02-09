@@ -39,6 +39,7 @@
             android:textSize="15dp"
             android:id="@+id/accept"
             android:layout_width="0dp"
+            android:background="#98FB34"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Accept"/>

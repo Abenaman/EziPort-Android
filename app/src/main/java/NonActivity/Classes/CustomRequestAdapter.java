@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.eziport.com.myapplication.R;
 import android.eziport.com.myapplication.SenderFormActivity;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,6 +69,19 @@ public class CustomRequestAdapter extends ArrayAdapter<RequestDataModel> {
             viewHolder.txtWeight.setText(this.dataSet.get(position).getWeight());
             viewHolder.txtTo.setText(this.dataSet.get(position).getTo());
             viewHolder.txtState.setText(this.dataSet.get(position).getState());
+
+            if(this.dataSet.get(position).getState()=="Approved")
+            {
+                viewHolder.txtState.setBackgroundColor(Color.parseColor("#21DA21"));
+            }
+            else if(this.dataSet.get(position).getState()=="Rejected")
+            {
+                viewHolder.txtState.setBackgroundColor(Color.parseColor("#FF3B3B"));
+            }
+            else
+            {
+                viewHolder.txtState.setBackgroundColor(Color.parseColor("#C4C920"));
+            }
 
 
             result=convertView;

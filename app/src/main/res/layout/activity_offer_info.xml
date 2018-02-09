@@ -20,11 +20,55 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_centerInParent="true"
+        android:paddingBottom="10dp"
+
+        android:background="#EA6D49"
+        android:weightSum="3"
+        >
+
+        <TextView
+            android:id="@+id/TitleOfRequest"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:text="Title"
+            android:textColor="#ffff"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/WeightOfRequest"
+            android:textSize="25dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Weight"
+            android:textColor="#ffff"/>
+
+
+        <TextView
+            android:id="@+id/ToOfRequest"
+            android:textSize="25dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Action"
+            android:textColor="#ffff" />
+
+    </LinearLayout>
     <fragment
     android:id="@+id/fragment2"
     android:name="android.eziport.com.myapplication.Notification.Activity.OfferInfoFragment"
     android:layout_width="match_parent"
-    android:layout_marginTop="60dp"
+    android:layout_marginTop="140dp"
     android:layout_height="match_parent"
     />
 

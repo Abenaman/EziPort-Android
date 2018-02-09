@@ -53,11 +53,11 @@ public class RequestInfoFragment extends ListFragment implements AdapterView.OnI
         dataModels.add(new RequestDataModel("Books", "5","Nigeria","Approved"));
         dataModels.add(new RequestDataModel("Watches", "5","Pakistan","Approved"));
         dataModels.add(new RequestDataModel("Bags", "8","India","Pending"));
-        dataModels.add(new RequestDataModel("Books", "5","Nigeria","Approved"));
+        dataModels.add(new RequestDataModel("Books", "5","Nigeria","Rejected"));
         dataModels.add(new RequestDataModel("Watches", "5","Pakistan","Approved"));
-        dataModels.add(new RequestDataModel("Bags", "8","India","Pending"));
+        dataModels.add(new RequestDataModel("Bags", "8","India","Rejected"));
         dataModels.add(new RequestDataModel("Books", "5","Nigeria","Approved"));
-        dataModels.add(new RequestDataModel("Watches", "5","Pakistan","Approved"));
+        dataModels.add(new RequestDataModel("Watches", "5","Pakistan","Rejected"));
         dataModels.add(new RequestDataModel("Bags", "8","India","Pending"));
         dataModels.add(new RequestDataModel("Books", "5","Nigeria","Approved"));
         dataModels.add(new RequestDataModel("Watches", "5","Pakistan","Approved"));

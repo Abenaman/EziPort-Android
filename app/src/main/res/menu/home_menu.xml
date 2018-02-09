@@ -5,13 +5,14 @@
     <item
         android:id="@+id/requestInfoMenu"
         android:orderInCategory="100"
-        android:title="My Requests"
-        app:showAsAction="never" />
+        android:icon="@drawable/ic_action_requests"
+        app:showAsAction="always" />
 
     <item
     android:id="@+id/offersInfoMenu"
     android:orderInCategory="100"
     android:title="My Offers"
-    app:showAsAction="never" />
+        android:icon="@drawable/ic_action_offers"
+    app:showAsAction="always" />
 
 </menu>
