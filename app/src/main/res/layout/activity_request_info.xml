@@ -20,11 +20,67 @@
 
     </android.support.design.widget.AppBarLayout>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_centerInParent="true"
+        android:paddingBottom="10dp"
+
+        android:background="#A148E3"
+        android:weightSum="4"
+        >
+
+        <TextView
+            android:id="@+id/TitleOfRequest"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:text="Title"
+            android:textColor="#ffff"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/WeightOfRequest"
+            android:textSize="25dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Weight"
+            android:textColor="#ffff"/>
+
+
+        <TextView
+            android:id="@+id/ToOfRequest"
+            android:textSize="25dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="To "
+            android:textColor="#ffff" />
+
+        <TextView
+            android:layout_weight="1"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:id="@+id/StatusOfRequest"
+            android:textColor="#ffff"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="States" />
+
+    </LinearLayout>
+
     <fragment
     android:id="@+id/fragment1"
     android:name="android.eziport.com.myapplication.Notification.Activity.RequestInfoFragment"
     android:layout_width="match_parent"
-    android:layout_marginTop="60dp"
+    android:layout_marginTop="140dp"
     android:layout_height="match_parent"
     />
 

@@ -193,6 +193,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/confirmpasswordLabel"
+            android:backgroundTint="#EA6D49"
+            android:textColor="#FFFF"
+            android:textStyle="bold"
             android:layout_marginEnd="14dp"
             android:layout_marginRight="43dp"
             android:layout_marginTop="18dp"
@@ -202,6 +205,9 @@
 
         <Button
             android:id="@+id/Register"
+            android:backgroundTint="#A148E3"
+            android:textColor="#FFFF"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/Cancel"
